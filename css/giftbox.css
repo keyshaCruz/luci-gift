@@ -1,0 +1,19 @@
+body{
+    box-sizing: border-box;
+    background-color:  #e9d8f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 a{
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 0 5px black;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+a:hover{
+    box-shadow: inset 150px 0 0 0 white;
+  color: black;
+}
