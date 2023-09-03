@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Document</title>
+    <link rel="stylesheet" href="css/new.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="logo"><a>Luci's World</a></div>
+       
+        <nav>
+          
+            <ul>
+                <li><a href="#index" class="active">Home</a></li>
+                <li><a href="#frieds">Friends</a></li>
+                <li><a href="#pictures">Picture & Videos</a></li>
+            </ul>
+        </nav>
+    </div>
+   
+    
+    <div class="hero">
+        
+
+    <div class="hero1">
+        <!-- <div class="doodle1">
+            <img src="img/101-1019328_aesthetic-sticker-png-removebg-preview.png" alt="">
+        </div> -->
+        <div class="COL1">
+            <p>Website is Under Maintenance</p>
+            <h1>We're <span>Lauching</span> Soon</h1>
+            <div class="launch-time">
+                <div >
+                    <p id="days">00</p>
+                    <span>Days</span>
+                </div>
+                <div >
+                    <p id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div >
+                    <p id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div >
+                    <p id="seconds">00</p>
+                    <span>Seconds</span>
+                </div>
+                
+                </div>
+           <a href="LearnMore.html" class="button">Learn More</a>
+           
+            </div>
+
+        </div>
+        
+    
+        <div class="outerDiv2">
+
+            <div class="COL2">
+                <div class="circle">
+                   <img src="img/IMG_8087.JPG" alt="">
+                </div>
+                <div class="textContainer">
+                    <p >Welcome Luci to your birthday gift you will get to see the rest on your birthday as soon as it hits 12am september 7th, you will get to view the rest of the page. If you havent done so go ahead and click on the Learn More</p>
+       
+                </div>
+                
+               </div> 
+
+               <div class="note">
+                <img src="img/22_pushing_30-removebg-preview.png" alt="">
+               </div>
+
+        </div>
+
+        
+
+        
+    </div>
+   
+    <footer>
+        <p>Dont try asking anyone👀</p>
+    </footer>
+    </body>
+  
+    <script>
+        var countDownDate = new Date("september 07, 2023 00:00:00").getTime();
+        var x = setInterval(function(){
+            var now = new Date().getTime();
+            var distance = countDownDate - now; 
+
+            var days = Math.floor(distance/(1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60))/ (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60))/ 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+            
+            let today = new Date().getTime();
+// use current year only
+let year = new Date().getFullYear();
+let s = `${year}-09-07`,  e = `${year}-12-15`
+let startDate = new Date(s).getTime();
+
+if (today >= startDate ) {
+  console.log('redirect');
+  window.location="index.html";
+}
+
+
+            if(distance < 0){
+                clearInterval(x);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+            }
+        },1000);
+
+ 
+    </script>
+</body>
+</html>
