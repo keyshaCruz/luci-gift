@@ -15,6 +15,7 @@ body{
     align-items: center;
 
 }
+
 .logo{
     text-decoration: 0;
     font-weight: bold;
@@ -57,6 +58,8 @@ margin-top: 50px;
 
     position: absolute;
     backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 

@@ -121,7 +121,8 @@ span{
 }
 
 .launch-time div span{
-    text-shadow: 0 0 5px black
+    text-shadow: 0 0 5px black;
+    color:black;
 
 }
 
