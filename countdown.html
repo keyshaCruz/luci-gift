@@ -31,28 +31,29 @@
         
 
     <div class="hero1">
+        <!-- <canvas id="confetti"></canvas> -->
         <!-- <div class="doodle1">
             <img src="img/101-1019328_aesthetic-sticker-png-removebg-preview.png" alt="">
         </div> -->
-        <div class="COL1">
-            <p>Website is Under Maintenance</p>
-            <h1>We're <span>Lauching</span> Soon</h1>
-            <div class="launch-time">
+        <div class="COL1" id="col1">
+            <p id="underMaintenance">Website is Under Maintenance</p>
+            <h1 id="h1Box">We're <span>Lauching</span> Soon</h1>
+            <div class="launch-time" id="launch">
                 <div >
                     <p id="days">00</p>
-                    <span>Days</span>
+                    <span class="word">Days</span>
                 </div>
                 <div >
                     <p id="hours">00</p>
-                    <span>Hours</span>
+                    <span class="word">Hours</span>
                 </div>
                 <div >
                     <p id="minutes">00</p>
-                    <span>Minutes</span>
+                    <span class="word">Minutes</span>
                 </div>
                 <div >
                     <p id="seconds">00</p>
-                    <span>Seconds</span>
+                    <span class="word">Seconds</span>
                 </div>
                 
                 </div>
@@ -91,7 +92,8 @@
         <p>Dont try asking anyone👀</p>
     </footer>
     </body>
-  
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
     <script>
         var countDownDate = new Date("september 07, 2023 00:00:00").getTime();
         var x = setInterval(function(){
@@ -114,9 +116,22 @@ let year = new Date().getFullYear();
 let s = `${year}-09-07`,  e = `${year}-12-15`
 let startDate = new Date(s).getTime();
 
-if (today >= startDate ) {
-  console.log('redirect');
-  window.location="index.html";
+// if (today >= startDate ) {
+//   console.log('redirect');
+//   window.location="index.html";
+// }
+const jsConfetti = new JSConfetti();
+
+if(true){
+    document.getElementById("h1Box").innerHTML = "Happy Birthday";
+    jsConfetti.addConfetti();
+    var elem = document.getElementById("launch");
+    elem.parentNode.removeChild(elem);
+    elem = document.getElementById("underMaintenance");
+    elem.remove();
+    elem = document.getElementById("col1");
+    elem.style.justifyContent = "center";
+
 }
 
 
